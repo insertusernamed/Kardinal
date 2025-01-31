@@ -1,9 +1,13 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <main>
+        <h1 class="d-flex align-items-center">
+            Welcome to Kardinal
+        </h1>
+    </main>
 </template>
+
+<style scoped>
+h1 {
+    color: black;
+}
+</style>
