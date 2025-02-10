@@ -10,18 +10,25 @@ export class Board {
         const newTask = new Task(
             Date.now(),
             `Task ${this.cards.length + 1}`,
-            `Description for Task ${this.cards.length + 1}`,
-            "todo"
+            "todo",
+            false
         );
         this.cards.push(newTask);
+    }
+
+    toggleTaskComplete(taskId) {
+        const task = this.cards.find(card => card.id === taskId);
+        if (task) {
+            task.completed = !task.completed;
+        }
     }
 }
 
 export class Task {
-    constructor(id, title, description, status) {
+    constructor(id, description, status, completed = false) {
         this.id = id;
-        this.title = title;
         this.description = description;
         this.status = status;
+        this.completed = completed;
     }
 }

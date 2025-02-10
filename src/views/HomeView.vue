@@ -34,6 +34,9 @@ const addBoard = () => {
 .container {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
 }
 
 .add-board-button {
